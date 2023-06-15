@@ -1,0 +1,88 @@
+.form-label {
+    color: #29365a;
+    -webkit-font-smoothing: auto;
+    margin-bottom: remCalc(4);
+
+    // This is for the tooltips
+    > div:last-child {
+        z-index: 1;
+    }
+}
+
+.form-legend {
+    color: #29365a;
+}
+
+.form-input,
+.form-select {
+    border-color: #d4d7de;
+    box-shadow: none;
+    font-size: remCalc(14);
+    height: remCalc(40);
+    padding: remCalc(8 12);
+    transition: border-color 100ms ease-out, box-shadow 100ms ease-out;
+
+    &:hover,
+    &:active {
+        border-color: #d4d7de;
+        box-shadow: 0 0 0 1px #d4d7de;
+    }
+
+    &:focus {
+        border-color: #547ef2;
+        box-shadow: 0 0 0 1px #547ef2;
+    }
+}
+
+.form-field--error .form-input,
+.form-field--error .form-select {
+    border-color: #cc4749;
+
+    &:hover,
+    &:focus,
+    &:active {
+        box-shadow: 0 0 0 1px #cc4749;
+    }
+}
+
+.form-field--success .form-input,
+.form-field--success .form-select {
+    border-color: #008a06;
+
+    &:hover,
+    &:focus,
+    &:active {
+        box-shadow: 0 0 0 1px #008a06;
+    }
+}
+
+.form-input.has-icon + .icon {
+    height: remCalc(40);
+}
+
+.form-checklist-checkbox ~ .form-label::before,
+.form-checklist-checkbox ~ .form-label::after {
+    height: remCalc(16);
+    width: remCalc(16);
+}
+
+.form-checklist-checkbox ~ .form-label::before {
+    border-color: #d4d7de;
+}
+
+.form-checklist-checkbox:checked ~ .form-label::before {
+    border-color: #d4d7de;
+}
+
+.form-checklist-checkbox ~ .form-label::after {
+    transform: scale(0.625);
+}
+
+.form-ccFields-field--ccCvv {
+    .icon {
+        height: remCalc(16);
+        margin-left: remCalc(2);
+        transform: translateY(-2px);
+        width: remCalc(16);
+    }
+}

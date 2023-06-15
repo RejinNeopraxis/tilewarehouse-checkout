@@ -1,0 +1,86 @@
+.checkout-steps {
+    counter-reset: $checkoutStep-counter;
+    list-style-type: none;
+    margin: 0;
+
+    @include breakpoint('medium') {
+        padding-right: 0;
+    }
+}
+
+.checkout-step {
+    background-color: #fff;
+    border-bottom: none;
+    border-radius: 0.5rem;
+    padding: remCalc(24);
+
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+}
+
+.stepHeader {
+    flex-wrap: wrap !important;
+    justify-content: space-between;
+    padding: 0;
+    text-decoration: none;
+}
+
+.stepHeader-title {
+    color: #29365a;
+    font-size: remCalc(20);
+    font-weight: 700;
+    margin-left: 0;
+}
+
+.checkout-form {
+    margin-left: 0 !important;
+
+    .form-checklist {
+        border: none;
+        border-radius: 0;
+    }
+
+    .form-checklist-item {
+        background-color: #f4f5f7;
+        border-bottom: none;
+        margin-bottom: remCalc(12);
+
+        &:hover,
+        &--selected {
+            background-color: #f4f5f7;
+        }
+    }
+
+    .form-checklist-body {
+        margin-left: remCalc(16);
+        margin-right: remCalc(16);
+
+        @include breakpoint('small') {
+            margin-left: remCalc(16);
+            margin-right: remCalc(16);
+        }
+    }
+
+    .paymentMethod {
+        padding: 0;
+        width: 100%;
+    }
+}
+
+.stepHeader-body {
+    flex: 0 0 100%;
+
+    .checkout-step--customer & {
+        margin-left: 0;
+    }
+}
+
+.sign-in-now-prompt {
+    font-family: 'Nunito', sans-serif;
+    font-size: remCalc(16);
+
+    a {
+        font-family: 'Nunito', sans-serif;
+    }
+}

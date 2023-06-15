@@ -1,0 +1,149 @@
+.shippingDatePicker {
+    font-family: 'Lato', sans-serif;
+
+    @media (min-width: 551px) {
+        margin: 0;
+    }
+
+    .react-datepicker {
+        width: 100%;
+    }
+
+    .react-datepicker__header-content {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 16px;
+    }
+
+    .react-datepicker__header-arrow {
+        padding: 8px 12px;
+
+        &:disabled {
+            svg {
+                fill: #d4d7de;
+            }
+        }
+
+        svg {
+            fill: #545e7b;
+            height: 12px;
+            width: 12px;
+        }
+
+        &--prev {
+            svg {
+                transform: scaleX(-1);
+            }
+        }
+    }
+
+    .react-datepicker__current-month {
+        color: #29365a;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 1px;
+    }
+
+    .react-datepicker__month-container {
+        background-color: #f4f5f7;
+        float: none;
+        margin-bottom: 16px;
+        padding: 1.5rem 0;
+
+        @media (min-width: 551px) {
+            padding: 1.5rem;
+        }
+
+        .react-datepicker__month {
+            margin: 0;
+        }
+    }
+
+    .react-datepicker__day-name {
+        color: #29365a;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: capitalize;
+        width: calc(calc(100% / 7) - 0.5rem);
+    }
+
+    .react-datepicker__week {
+        display: flex;
+    }
+
+    .react-datepicker__day {
+        align-items: center;
+        background-color: #fff;
+        border-radius: 4px;
+        color: #29365a;
+        display: inline-flex;
+        font-family: 'Nunito', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        height: 55px;
+        justify-content: center;
+        line-height: 1.5;
+        width: calc(calc(100% / 7) - 0.5rem);
+
+        &[aria-disabled='true'] {
+            background-color: transparent;
+            border: 1px solid #d4d7de;
+            color: #d4d7de;
+        }
+
+        @media (min-width: 551px) {
+            font-size: 20px;
+            height: 72px;
+        }
+    }
+
+    .react-datepicker__day--selected {
+        background-color: #67cac1;
+        color: #fff;
+
+        &:hover {
+            background-color: #67cac1;
+        }
+    }
+
+    .react-datepicker__day-name,
+    .react-datepicker__day,
+    .react-datepicker__time-name {
+        margin: 0.25rem;
+    }
+}
+
+.shippingDatePicker-price {
+    color: #67cac1;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: calc(22 / 14);
+
+    .react-datepicker__day--selected & {
+        color: #fff;
+    }
+
+    @media (min-width: 551px) {
+        font-size: 16px;
+        line-height: calc(22 / 16);
+    }
+}
+
+.shippingDatePicker-delivery-description {
+    align-items: flex-start;
+    display: flex;
+
+    .icon {
+        flex: 0 0 auto;
+        margin-right: 8px;
+        margin-top: 4px;
+    }
+}
+
+#narrow-road ~ .form-fieldset .form-legend {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: auto;
+    font-weight: normal;
+}

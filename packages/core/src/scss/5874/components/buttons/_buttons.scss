@@ -1,0 +1,77 @@
+.button {
+    background-color: #547ef2;
+    border: 1px solid #547ef2;
+    border-radius: var(--button-border-radius);
+    color: white;
+    font-size: remCalc(16);
+    font-weight: var(--button-font-weight);
+    line-height: calc(22 / 16);
+    padding: remCalc(16 32);
+    text-transform: var(--button-text-transform);
+
+    .icon {
+        margin-bottom: remCalc(2);
+    }
+
+    svg {
+        fill: white;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: #7698f5;
+        border: 1px solid #7698f5;
+        color: white;
+
+        svg {
+            fill: white;
+        }
+    }
+
+    &:active {
+        background-color: #4365c2;
+        border: 1px solid #4365c2;
+        color: white;
+
+        svg {
+            fill: white;
+        }
+    }
+}
+
+.button--tertiary {
+    font-size: remCalc(12);
+    line-height: calc(18 / 12);
+    padding: remCalc(2 12);
+}
+
+.button--tertiary-grey {
+    background-color: #f4f5f7;
+    border: 1px solid #f4f5f7;
+    color: #29365a;
+
+    svg {
+        fill: #29365a;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: #f6f7f9;
+        border: 1px solid #d4d7de;
+        color: #29365a;
+
+        svg {
+            fill: #29365a;
+        }
+    }
+
+    &:active {
+        background-color: #c3c4c6;
+        border: 1px solid #29365a;
+        color: #29365a;
+
+        svg {
+            fill: #29365a;
+        }
+    }
+}

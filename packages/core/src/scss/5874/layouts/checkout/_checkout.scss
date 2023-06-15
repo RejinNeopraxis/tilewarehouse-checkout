@@ -1,0 +1,29 @@
+.layout-checkout {
+    .layout-main {
+        @media (max-width: 551px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+.layout {
+    padding: 0 0 7.5rem 0;
+
+    @include breakpoint('medium') {
+        padding: 0 1.5rem 7.5rem 1.5rem;
+    }
+}
+
+.layout-main {
+    @include breakpoint('large') {
+        padding-right: 0;
+        width: 60%;
+    }
+}
+
+.layout-cart {
+    @include breakpoint('large') {
+        width: 40%;
+    }
+}

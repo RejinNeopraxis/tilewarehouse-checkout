@@ -1,0 +1,52 @@
+.customerEmail-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.customerEmail-action {
+    padding-left: 0;
+
+    @include breakpoint('small') {
+        padding-left: 0;
+    }
+}
+
+.customerEmail-button {
+    width: auto;
+}
+
+.customerEmail-body {
+    @include breakpoint('small') {
+        width: 100%;
+    }
+}
+
+.checkoutRemote {
+    align-items: center;
+    background-color: #f6f9fe;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: remCalc(16);
+
+    @include breakpoint('medium') {
+        padding: remCalc(24);
+    }
+
+    > p {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 700;
+        margin-bottom: remCalc(16);
+        text-align: center;
+        width: 100%;
+    }
+
+    > :not(:first-child) {
+        margin-left: remCalc(8);
+        margin-right: remCalc(8);
+    }
+}
+
+#applepayCheckoutButton:empty {
+    display: none;
+}

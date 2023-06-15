@@ -1,0 +1,83 @@
+.orderConfirmation {
+    padding-top: 0;
+
+    .optimizedCheckout-headingPrimary {
+        font-size: remCalc(20);
+        font-weight: 700;
+        margin-bottom: remCalc(24);
+    }
+
+    .orderConfirmation-section {
+        margin-bottom: remCalc(24);
+    }
+
+    .continueButtonContainer {
+        text-align: center;
+
+        .button {
+            font-weight: 400;
+        }
+    }
+
+    .sign-up-form-fieldset {
+        background-color: #fff;
+        border: none;
+        border-radius: remCalc(8);
+        display: flex;
+        flex-direction: column;
+        padding: remCalc(24);
+
+        .form-legend {
+            // Required to fix the default positioning of the legend
+            float: left;
+            font-family: 'Nunito', sans-serif;
+            font-size: remCalc(20);
+            font-weight: 700;
+        }
+
+        .form {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: none !important;
+        }
+
+        .form-field {
+            flex: 0 0 100%;
+
+            @include breakpoint('medium') {
+                flex: 0 0 calc(50% - 16px);
+
+                & + .form-field {
+                    margin-left: remCalc(16);
+                }
+            }
+        }
+
+        .form-actions {
+            margin-bottom: 0;
+            margin-top: remCalc(8);
+            width: 100%;
+        }
+    }
+}
+
+.layout-order-confirmation {
+    .cart {
+        display: block;
+    }
+
+    .product-body {
+        order: unset;
+        width: 50%;
+    }
+
+    .product-actions {
+        align-self: flex-start;
+    }
+}
+
+.orderConfirmation-section {
+    background-color: #fff;
+    border-radius: remCalc(8);
+    padding: remCalc(24);
+}

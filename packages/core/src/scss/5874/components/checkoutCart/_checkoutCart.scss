@@ -1,0 +1,101 @@
+.cart {
+    border: none;
+    border-radius: remCalc(8);
+    box-shadow: none;
+
+    @include breakpoint('large') {
+        margin-top: 0;
+    }
+}
+
+.cart-title {
+    font-size: remCalc(24);
+    font-weight: 700;
+    line-height: calc(32 / 24);
+}
+
+.cart-header-link {
+    .button {
+        margin-bottom: 0;
+    }
+}
+
+.cart-section-heading {
+    font-size: remCalc(16);
+    font-weight: 400;
+}
+
+.cart-priceItem {
+    font-family: 'Nunito', sans-serif;
+    font-size: remCalc(20);
+    margin-bottom: 0;
+
+    .cart-priceItem-label {
+        font-weight: 700;
+    }
+
+    .cart-priceItem-value {
+        font-weight: 400;
+    }
+}
+
+.cart-section--subtotals {
+    padding-bottom: 0;
+    padding-top: 0;
+
+    section {
+        padding-bottom: 0;
+        padding-top: 0;
+
+        > * {
+            display: block;
+            margin: 0 -1.5rem;
+            padding: 1.5rem;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #ebebeb;
+            }
+        }
+    }
+
+    .redeemable-label,
+    .redeemable-entry {
+        margin-top: 0;
+    }
+}
+
+.cart-priceItem-coupon {
+    position: relative;
+
+    .cart-priceItem-link {
+        bottom: remCalc(-4);
+        font-size: remCalc(12);
+        position: absolute;
+        right: 0;
+        text-transform: capitalize;
+    }
+}
+
+.cart-priceItem-remove-coupon {
+    height: remCalc(12);
+    margin-bottom: 2px;
+    margin-right: 4px;
+    width: remCalc(12);
+
+    svg {
+        fill: #ff6b6b;
+    }
+}
+
+.cart-priceItem--total {
+    .cart-priceItem-label {
+        font-size: remCalc(20);
+    }
+}
+
+.cart-priceItem--total-vat {
+    color: #545e7b;
+    display: block;
+    font-size: remCalc(14);
+    font-weight: 400;
+}
