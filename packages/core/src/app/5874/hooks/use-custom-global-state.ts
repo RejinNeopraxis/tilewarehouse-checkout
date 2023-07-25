@@ -96,7 +96,7 @@ export const customGlobalState = createStore<CustomGlobalState>((set) => ({
         }));
 
         const response = await fetch(
-            `https://api.tilewarehouse.co.uk/api/bp/product-availability`,
+            `https://sandbox-api.tw.ayatacommerce.com/api/bp/product-availability`,
             {
                 headers: {
                     Authorization:
