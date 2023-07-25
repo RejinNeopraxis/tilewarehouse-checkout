@@ -201,7 +201,7 @@ const ShippingDatePicker: FunctionComponent<ShippingDatePickerProps> = ({
         });
 
         if (!isValid) {
-            setSelectedDate(newMinDate);
+            handleDateSelect(newMinDate);
             handleSelect(method!.id);
             const formattedComment = formatComments(
                 comments,
