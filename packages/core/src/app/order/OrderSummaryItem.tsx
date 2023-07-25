@@ -39,6 +39,10 @@ const OrderSummaryItem: FunctionComponent<OrderSummaryItemProps> = ({
     const tilesPerM2 = graphqlData?.customFields?.edges?.find(
         (edge) => edge?.node.name === 'Tiles per M2'
     )?.node?.value;
+    
+    const packof2 = graphqlData?.customFields?.edges?.find(
+        (edge) => edge?.node.name === 'Coverage per box'
+    )?.node?.value;
 
     const price: number = tilesPerM2
         ? Number(tilesPerM2) * graphqlData?.prices?.price?.value
@@ -92,9 +96,15 @@ const OrderSummaryItem: FunctionComponent<OrderSummaryItemProps> = ({
                                 Area: { Math.round((quantity / Number(tilesPerM2)) * 100) / 100 }m<sup>2</sup>
                             </li>
                         ) : null }
+                        { packof2 ? (
+                            <li className="product-option">
+                            Boxes: { quantity }
+                            </li>
+                        ) : 
                         <li className="product-option">
-                            Quantity: { quantity }
-                        </li>
+                        Quantity: { quantity }
+                        </li> }
+                        
                     </ul>
                 ) : null }
                 {productOptions && productOptions.length > 0 && (
