@@ -91,11 +91,19 @@ const OrderSummaryItem: FunctionComponent<OrderSummaryItemProps> = ({
                                 Size: { width } x { height };
                             </li>
                         ) : null }
-                        { tilesPerM2 ? (
-                            <li className="product-option">
-                                Area: { Math.round((quantity / Number(tilesPerM2)) * 100) / 100 }m<sup>2</sup>
-                            </li>
-                        ) : null }
+                        {tilesPerM2 ? (
+                    <li className="product-option">
+                        {packof2 ? (
+                        <React.Fragment>
+                            Coverage Per Box: {Math.round((quantity * Number(packof2)) * 100) / 100}m<sup>2</sup>
+                        </React.Fragment>
+                        ) : (
+                        <React.Fragment>
+                            Area: {Math.round((quantity / Number(tilesPerM2)) * 100) / 100}m<sup>2</sup>
+                        </React.Fragment>
+                        )}
+                    </li>
+                    ) : null}
                         { packof2 ? (
                             <li className="product-option">
                             Boxes: { quantity }
