@@ -95,7 +95,7 @@ const OrderSummaryItem: FunctionComponent<OrderSummaryItemProps> = ({
                     <li className="product-option">
                         {packof2 ? (
                         <React.Fragment>
-                            Coverage Per Box: {Math.round((quantity * Number(packof2)) * 100) / 100}m<sup>2</sup>
+                            Total Coverage: {Math.round((quantity * Number(packof2)) * 100) / 100}m<sup>2</sup>
                         </React.Fragment>
                         ) : (
                         <React.Fragment>
