@@ -24,6 +24,10 @@ const isHolidayDay = (date: Date, holidayDays: HolidayDay[]) => {
     );
 };
 
+const isDisabledDateByMerchant = (date:Date, disabledDates: Date[]) => {
+    return disabledDates?.filter(disabledDate => isSameDay(disabledDate, date)).length > 0;
+}
+
 export const calculateTrueMinimumDate = ({
     minDate,
     holidayDays,
@@ -111,12 +115,14 @@ export const isDateAllowed = ({
     const nextDay = isTomorrow(date);
     const weekend = isWeekend(date);
     const holiday = isHolidayDay(date, holidayDays);
+    const isDisabledDate = isDisabledDateByMerchant(date, [new Date("2024-01-02")]);
     return Boolean(
         minDate &&
             !isBefore(date, minDate) &&
             (allowToday || !today) &&
             !weekend &&
             !holiday &&
+            !isDisabledDate && 
             date.getTime() >= minDate.getTime() &&
             ((nextDay &&
                 new Date().getHours() < CUTOFF_TIME &&

@@ -53,20 +53,6 @@ const OrderStatus: FunctionComponent<OrderStatusProps> = ({
                 </p>
             )}
 
-            { deliveryDate && totalWeight ? (
-                <p>
-                    Your order will be delivered by: <strong>{isPallet ? 'Pallet' : 'Parcel'} on { format(parse(deliveryDate, 'yyyy-MM-dd', new Date()), 'd LLLL yyyy') }</strong>
-                    {isPallet ? (
-                        <React.Fragment>
-                            <br />
-                            <a href="/deliveries/" rel="noopener" target="_blank">
-                                This order is a kerbside delivery.
-                            </a>
-                        </React.Fragment>
-                    ) : null}
-                </p>
-            ) : null }
-
             <p data-test="order-confirmation-order-status-text">
                 <OrderStatusMessage
                     orderNumber={order.orderId}

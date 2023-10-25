@@ -140,7 +140,8 @@ const PaymentForm: FunctionComponent<
                 values={ values }
             />
 
-            <PaymentRedeemables />
+            {/* Removing redeemables as requested in TIL-400 */}
+            {/* <PaymentRedeemables /> */}
 
             {isTermsConditionsRequired && (
                 <TermsConditions
